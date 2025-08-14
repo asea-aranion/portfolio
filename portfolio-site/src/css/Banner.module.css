@@ -1,0 +1,9 @@
+.title {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-background);
+    margin: 0;
+    font-weight: bold;
+    padding: 1rem;
+}
