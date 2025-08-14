@@ -1,5 +1,6 @@
 import type { AppSectionProps } from "./types";
 import clockGif from "./assets/underwater_clock.gif";
+import packetPng from "./assets/packet.png";
 
 export const appData: AppSectionProps[] = [
     {
@@ -16,6 +17,22 @@ export const appData: AppSectionProps[] = [
         img: {
             url: clockGif,
             alt: "A pixelated digital clock reading 11:24am with a background of a coral reef and fish",
+        },
+    },
+    {
+        title: "Packet: Travel Packing Lists",
+        subtitle: "Swift",
+        description:
+            "Packet helps you get ready for wherever your travels take you. You can view the weather at your destination as you create your packing list and update or complete your list from anywhere, since your data is persisted across all your Apple devices.",
+        links: [
+            {
+                text: "view in asea-aranion/Packet",
+                href: "https://github.com/asea-aranion/Packet",
+            },
+        ],
+        img: {
+            url: packetPng,
+            alt: "An iPhone and iPad both displaying a packing list app",
         },
     },
 ];

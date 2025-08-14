@@ -44,6 +44,7 @@
     align-self: center;
     transition: transform 0.25s ease;
     animation: 1.25s ease 0s 1 running slide-in;
+    max-width: 90%;
 }
 
 .img:hover {
