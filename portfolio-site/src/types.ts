@@ -1,11 +1,14 @@
+export interface AppLinkProps {
+    text: string;
+    href: string;
+    external: boolean;
+}
+
 export interface AppSectionProps {
     title: string;
     subtitle: string;
     description: string;
-    links: {
-        text: string;
-        href: string;
-    }[];
+    links: AppLinkProps[];
     img: {
         url: string;
         alt: string;

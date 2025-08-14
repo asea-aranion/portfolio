@@ -12,6 +12,7 @@ export const appData: AppSectionProps[] = [
             {
                 text: "view in tidbyt/community/apps",
                 href: "https://github.com/tidbyt/community/tree/main/apps/underwaterclock",
+                external: true,
             },
         ],
         img: {
@@ -28,6 +29,12 @@ export const appData: AppSectionProps[] = [
             {
                 text: "view in asea-aranion/Packet",
                 href: "https://github.com/asea-aranion/Packet",
+                external: true,
+            },
+            {
+                text: "privacy policy",
+                href: "/packet-privacy",
+                external: false,
             },
         ],
         img: {

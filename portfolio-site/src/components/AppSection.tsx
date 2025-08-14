@@ -1,10 +1,8 @@
-import {
-    faArrowUpRightFromSquare,
-    faFilePen,
-} from "@fortawesome/free-solid-svg-icons";
+import { faFilePen } from "@fortawesome/free-solid-svg-icons";
 import styles from "../css/AppSection.module.css";
 import type { AppSectionProps } from "../types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AppLink from "./AppLink";
 
 const AppSection = ({
     title,
@@ -23,13 +21,10 @@ const AppSection = ({
                 </h3>
                 <p className={styles.appDescription}>{description}</p>
                 {links.map((link) => (
-                    <a
+                    <AppLink
+                        text={link.text}
                         href={link.href}
-                        target="blank">
-                        {link.text}{" "}
-                        <FontAwesomeIcon
-                            icon={faArrowUpRightFromSquare}></FontAwesomeIcon>
-                    </a>
+                        external={link.external}></AppLink>
                 ))}
             </div>
             <img
