@@ -1,0 +1,16 @@
+.header,
+.text {
+    margin: 2rem;
+}
+
+.title {
+    font-size: 36px;
+}
+
+.subtitle {
+    font-size: 26px;
+}
+
+.text {
+    font-size: 20px;
+}
