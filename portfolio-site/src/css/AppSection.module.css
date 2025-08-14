@@ -1,0 +1,28 @@
+.section {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.leftContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.appTitle {
+    font-size: 28px;
+    margin: 0;
+}
+
+.appSubtitle {
+    margin: 0;
+    color: var(--secondary-text);
+}
+
+.appDescription {
+    margin: 0;
+}

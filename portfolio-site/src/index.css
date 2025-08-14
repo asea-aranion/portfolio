@@ -10,6 +10,7 @@
     background-color: #222237;
     --secondary-background: #424274;
     color: white;
+    --secondary-text: #c7dcfa;
 }
 
 body {

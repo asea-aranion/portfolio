@@ -1,0 +1,8 @@
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: 2rem;
+}

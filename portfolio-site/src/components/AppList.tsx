@@ -10,7 +10,11 @@ const AppList = ({ apps }: AppListProps) => {
     return (
         <section className={styles.container}>
             {apps.map((appData) => (
-                <AppSection title={appData.title}></AppSection>
+                <AppSection
+                    title={appData.title}
+                    subtitle={appData.subtitle}
+                    description={appData.description}
+                    links={appData.links}></AppSection>
             ))}
         </section>
     );
