@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 :root {
-    font-family: Avenir, sans-serif;
+    font-family: "Space Grotesk", Avenir, sans-serif;
     font-weight: 400;
 
     font-synthesis: none;
