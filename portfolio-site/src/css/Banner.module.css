@@ -1,3 +1,14 @@
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .header {
     box-sizing: border-box;
     width: 100%;
@@ -8,6 +19,7 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
+    animation: 1.25s ease 0s 1 running slide-in;
 }
 
 .title {

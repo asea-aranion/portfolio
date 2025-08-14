@@ -1,3 +1,14 @@
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .section {
     box-sizing: border-box;
     width: 100%;
@@ -32,6 +43,7 @@
     justify-self: center;
     align-self: center;
     transition: transform 0.25s ease;
+    animation: 1.25s ease 0s 1 running slide-in;
 }
 
 .img:hover {
