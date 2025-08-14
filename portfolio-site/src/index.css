@@ -1,9 +1,17 @@
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Avenir, sans-serif;
     font-weight: 400;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    background-color: #222237;
+    --secondary-background: #424274;
+    color: white;
+}
+
+body {
+    margin: 0;
 }
