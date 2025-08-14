@@ -15,7 +15,7 @@
     text-align: center;
     background-color: var(--secondary-background);
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;

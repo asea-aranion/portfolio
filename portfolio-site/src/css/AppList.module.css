@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 4rem;
+    padding: 4rem 2rem;
     overflow-x: hidden;
 }
