@@ -10,7 +10,7 @@
     background-color: #222237;
     --secondary-background: #424274;
     color: white;
-    --secondary-text: #c7dcfa;
+    --secondary-text: #dfe8ff;
 }
 
 body {
@@ -19,14 +19,10 @@ body {
 
 a,
 a:active {
-    color: #dfe8ff;
+    color: #dfe8ff !important;
     text-decoration: none;
 }
 
 a:hover {
     color: #a5beff !important;
-}
-
-a:visited {
-    color: #dbc2ff;
 }
