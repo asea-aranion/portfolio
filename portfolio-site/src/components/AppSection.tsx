@@ -6,6 +6,7 @@ const AppSection = ({
     subtitle,
     description,
     links,
+    img,
 }: AppSectionProps) => {
     return (
         <section className={styles.section}>
@@ -21,6 +22,10 @@ const AppSection = ({
                     </a>
                 ))}
             </div>
+            <img
+                className={styles.img}
+                src={img.url}
+                alt={img.alt}></img>
         </section>
     );
 };

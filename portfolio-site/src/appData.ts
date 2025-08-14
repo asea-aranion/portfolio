@@ -1,4 +1,5 @@
 import type { AppSectionProps } from "./types";
+import clockGif from "./assets/underwater_clock.gif";
 
 export const appData: AppSectionProps[] = [
     {
@@ -12,5 +13,9 @@ export const appData: AppSectionProps[] = [
                 href: "https://github.com/tidbyt/community/tree/main/apps/underwaterclock",
             },
         ],
+        img: {
+            url: clockGif,
+            alt: "A pixelated digital clock reading 11:24am with a background of a coral reef and fish",
+        },
     },
 ];

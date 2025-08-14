@@ -14,7 +14,8 @@ const AppList = ({ apps }: AppListProps) => {
                     title={appData.title}
                     subtitle={appData.subtitle}
                     description={appData.description}
-                    links={appData.links}></AppSection>
+                    links={appData.links}
+                    img={appData.img}></AppSection>
             ))}
         </section>
     );

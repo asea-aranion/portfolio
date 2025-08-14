@@ -6,4 +6,8 @@ export interface AppSectionProps {
         text: string;
         href: string;
     }[];
+    img: {
+        url: string;
+        alt: string;
+    };
 }
