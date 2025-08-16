@@ -4,6 +4,33 @@ import packetPng from "./assets/packet.png";
 
 export const appData: AppSectionProps[] = [
     {
+        title: "Packet: Travel Packing Lists",
+        subtitle: "Swift",
+        description:
+            "Packet helps you get ready for wherever your travels take you. You can view the weather at your destination as you create your packing list and update or complete your list from anywhere, since your data is persisted across all your Apple devices.",
+        links: [
+            {
+                text: "view in asea-aranion/Packet",
+                href: "https://github.com/asea-aranion/Packet",
+                external: true,
+            },
+            {
+                text: "download on the app store",
+                href: "https://apps.apple.com/us/app/packet-travel-packing-lists/id6741205673?itscg=30200&itsct=apps_box_link&mttnsubad=6741205673",
+                external: true,
+            },
+            {
+                text: "privacy policy",
+                href: "/packet-privacy",
+                external: false,
+            },
+        ],
+        img: {
+            url: packetPng,
+            alt: "An iPhone and iPad both displaying a packing list app",
+        },
+    },
+    {
         title: "Underwater Clock",
         subtitle: "Starlark",
         description:
@@ -18,28 +45,6 @@ export const appData: AppSectionProps[] = [
         img: {
             url: clockGif,
             alt: "A pixelated digital clock reading 11:24am with a background of a coral reef and fish",
-        },
-    },
-    {
-        title: "Packet: Travel Packing Lists",
-        subtitle: "Swift",
-        description:
-            "Packet helps you get ready for wherever your travels take you. You can view the weather at your destination as you create your packing list and update or complete your list from anywhere, since your data is persisted across all your Apple devices.",
-        links: [
-            {
-                text: "view in asea-aranion/Packet",
-                href: "https://github.com/asea-aranion/Packet",
-                external: true,
-            },
-            {
-                text: "privacy policy",
-                href: "/packet-privacy",
-                external: false,
-            },
-        ],
-        img: {
-            url: packetPng,
-            alt: "An iPhone and iPad both displaying a packing list app",
         },
     },
 ];
