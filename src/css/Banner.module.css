@@ -1,34 +1,12 @@
-@keyframes slide-in {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 .header {
     box-sizing: border-box;
-    width: 100%;
     text-align: center;
-    background-color: var(--secondary-background);
-    margin: 0;
+    border: white 1px solid;
+    border-radius: 40px;
+    margin: 2rem;
     padding: 2rem;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    animation: 1.25s ease 0s 1 running slide-in;
 }
 
-.title {
-    margin: 0;
-    font-weight: bold;
-    font-size: 42px;
-}
-
-.subtitle {
-    font-weight: normal;
-    font-size: 28px;
+.display {
+    font-size: 36px;
 }

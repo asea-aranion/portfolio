@@ -1,0 +1,14 @@
+.display {
+    font-size: 34px;
+    padding: 2rem;
+    border: white 1px solid;
+    border-radius: 40px;
+    margin: 2rem;
+    overflow-wrap: break-word;
+    height: min-content;
+    transition: transform ease-in-out 0.5s;
+}
+
+.display:hover {
+    transform: scale(1.025);
+}

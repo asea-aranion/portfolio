@@ -1,15 +1,19 @@
+import { useState } from "react";
 import styles from "../css/Banner.module.css";
+import { useMarkdownTyping } from "../mdAnimation";
+
+const text = `[linkedin](https://www.linkedin.com/in/leia-spagnola/) or [github](https://github.com/asea-aranion)`;
 
 const Banner = () => {
+    const [, setDone0] = useState(false);
+
+    const { display } = useMarkdownTyping(text, true, setDone0);
+
     return (
         <header className={styles.header}>
-            <h1 className={styles.title}>apps by leia spagnola</h1>
-            <a
-                className={styles.subtitle}
-                href="https://github.com/asea-aranion"
-                target="blank">
-                asea-aranion on github
-            </a>
+            <div
+                className={styles.display}
+                dangerouslySetInnerHTML={{ __html: display }}></div>
         </header>
     );
 };
