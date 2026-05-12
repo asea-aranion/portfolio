@@ -1,0 +1,33 @@
+.grid {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    column-gap: 2rem;
+    margin: 4rem;
+}
+
+.buttonColumn {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+
+.button {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    color: var(--link);
+    box-sizing: border-box;
+    border: var(--link) 1px solid;
+    width: 180px;
+    height: 180px;
+    font-size: 56px;
+    outline-offset: 0;
+    outline: var(--link) 1px solid;
+    transition: outline-offset ease-in-out 0.5s;
+}
+
+.selectedButton,
+.button:hover {
+    outline-offset: 10px;
+}

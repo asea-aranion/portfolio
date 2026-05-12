@@ -10,7 +10,7 @@ type MarkdownTypingData = {
     applyBoldNext: boolean;
 };
 
-export const MS_PER_CHAR = 20;
+export const MS_PER_CHAR = 30;
 
 const doubleStarPattern = /^\*\*/;
 const underscorePattern = /^_/;
