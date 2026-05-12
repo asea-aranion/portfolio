@@ -1,0 +1,22 @@
+.container {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: black;
+	border-radius: 0.75rem;
+	border: 0.5rem blue solid;
+	box-sizing: border-box;
+	font-family: "Space Mono", monospace;
+	font-size: 24px;
+}
+
+.string {
+	color: var(--string);
+}
+
+.level2 {
+	text-indent: 3rem;
+}
+
+.level3 {
+	text-indent: 6rem;
+}
