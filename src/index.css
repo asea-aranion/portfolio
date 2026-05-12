@@ -12,7 +12,10 @@
     background-color: #222237;
     --secondary-background: #424274;
     color: white;
-    --secondary-text: #dfe8ff;
+    --link: #bcfde0;
+    --link-hover: #71ffbf;
+    --bold: #ccedff;
+    --italic: #d0bdff;
 }
 
 body {
@@ -21,10 +24,19 @@ body {
 
 a,
 a:active {
-    color: #dfe8ff !important;
+    color: var(--link) !important;
     text-decoration: none;
 }
 
 a:hover {
-    color: #a5beff !important;
+    color: var(--link-hover) !important;
+    text-decoration: underline;
+}
+
+b {
+    color: var(--bold);
+}
+
+i {
+    color: var(--italic);
 }
