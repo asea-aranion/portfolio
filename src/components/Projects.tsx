@@ -42,8 +42,12 @@ const projects: Project[] = [
     },
 ];
 
+const noSelectionText = `_Click a button to learn more about one of my projects._`;
+
 const Projects = () => {
-    const [selectedProject, setSelectedProject] = useState(-1);
+    const [selectedProject, setSelectedProject] = useState<number | undefined>(
+        undefined,
+    );
     const [, setDone] = useState(false);
 
     return (
@@ -60,6 +64,14 @@ const Projects = () => {
                     </>
                 ))}
             </div>
+            <>
+                {selectedProject == undefined && (
+                    <TypingDisplay
+                        text={noSelectionText}
+                        ready={true}
+                        setDone={setDone}></TypingDisplay>
+                )}
+            </>
             {projects.map((_, index) => {
                 return (
                     <>
