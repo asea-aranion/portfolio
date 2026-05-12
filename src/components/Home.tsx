@@ -1,12 +1,9 @@
-import AppList from "./AppList";
-import Banner from "./Banner";
-import { appData } from "../appData";
+import Intro from "./Intro";
 
 const Home = () => {
     return (
         <>
-            <Banner></Banner>
-            <AppList apps={appData}></AppList>
+            <Intro></Intro>
         </>
     );
 };
