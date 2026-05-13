@@ -18,8 +18,14 @@ type Project = {
 const projects: Project[] = [
     {
         text: `**Packet: Travel Packing Lists**
-		_Swift, SwiftUI_
-		An [iOS packing list app](https://github.com/asea-aranion/Packet) to help you travel stress-free`,
+_Swift, SwiftUI_
+
+Never forget to pack your toothpaste again! This app was inspired by my travels to and from college, and by the indie iOS devs who first showed me that programming can be fun and a career. _100 Days of Swift_ later, I made Packet, with some features I think all travelers will find handy:
+- WeatherKit and CoreLocation integration to show you the forecast as you decide what outfits to bring
+- SwiftData and CloudKit persistence so your lists sync across all your devices
+- Templates and autocomplete to make writing your list almost as chill as the vacation itself
+
+Check out the [repo](https://github.com/asea-aranion/Packet) or [download on the app store](https://apps.apple.com/us/app/packet-travel-packing-lists/id6741205673?itscg=30200&itsct=apps_box_link&mttnsubad=6741205673)!`,
         icon: faSuitcase,
     },
     {
@@ -64,20 +70,19 @@ const Projects = () => {
                     </>
                 ))}
             </div>
-            <>
                 {selectedProject == undefined && (
                     <TypingDisplay
                         text={noSelectionText}
                         ready={true}
                         setDone={setDone}></TypingDisplay>
                 )}
-            </>
-            {projects.map((_, index) => {
+            
+            {projects.map((project, index) => {
                 return (
                     <>
                         {selectedProject == index && (
                             <TypingDisplay
-                                text={projects[index].text}
+                                text={project.text}
                                 ready={true}
                                 setDone={setDone}></TypingDisplay>
                         )}
