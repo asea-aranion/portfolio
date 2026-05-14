@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import TypingSpeedContext from "./components/TypingSpeedContext";
 
 type MarkdownTypingData = {
     workingText: string;
@@ -36,7 +37,11 @@ export const useMarkdownTyping = (
 
     const timer = useRef<number>(undefined);
 
+	const msPerChar = useContext(TypingSpeedContext);
+
     useEffect(() => {
+		clearInterval(timer.current);
+
         if (readyToStart) {
             timer.current = setInterval(() => {
                 setData(
@@ -162,11 +167,11 @@ export const useMarkdownTyping = (
                         return updatedData;
                     },
                 );
-            }, MS_PER_CHAR);
+            }, msPerChar.current);
         }
 
         return () => clearInterval(timer.current);
-    }, [setDone, readyToStart]);
+    }, [msPerChar.current, setDone, readyToStart]);
 
     return { display: data.displayText };
 };

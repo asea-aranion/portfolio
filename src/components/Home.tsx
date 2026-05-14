@@ -1,9 +1,12 @@
 import TypingDisplay from "./TypingDisplay";
 import styles from "../css/Home.module.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Projects from "./Projects";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faFastForward } from "@fortawesome/free-solid-svg-icons";
+import TypingSpeedContext from "./TypingSpeedContext";
 
-const introText = `Hello, dear reader! I'm **Leia**, a rising junior studying _computer science and linguistics_ at the **University of Maryland, College Park**.`;
+const introText = `Hello, dear reader! I'm **Leia**, a rising junior studying _computer science_ and _linguistics_ at the **University of Maryland, College Park**.`;
 
 const contactsText = `Find me on:
 - [linkedin](https://www.linkedin.com/in/leia-spagnola/)
@@ -19,8 +22,27 @@ const Home = () => {
     const [contactsDone, setContactsDone] = useState(false);
     const [seeProjectsDone, setSeeProjectsDone] = useState(false);
 
+	const msPerChar = useContext(TypingSpeedContext);
+
     return (
         <>
+            <div className={styles.speedControlsContainer}>
+                <FontAwesomeIcon icon={faPlay}></FontAwesomeIcon>
+                <div className={styles.rangeContainer}>
+                    <input
+                        type="range"
+                        step="any"
+                        className={styles.rangeInput}
+                        min={5}
+                        max={65}
+                        defaultValue={msPerChar.current}
+                        onChange={(e) =>
+                            (msPerChar.current = e.target
+                                .value as unknown as number)
+                        }></input>
+                </div>
+                <FontAwesomeIcon icon={faFastForward}></FontAwesomeIcon>
+            </div>
             <div className={styles.introContainer}>
                 <TypingDisplay
                     text={introText}
