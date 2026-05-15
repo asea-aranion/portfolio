@@ -37,10 +37,10 @@ export const useMarkdownTyping = (
 
     const timer = useRef<number>(undefined);
 
-	const msPerChar = useContext(TypingSpeedContext);
+    const msPerChar = useContext(TypingSpeedContext);
 
     useEffect(() => {
-		clearInterval(timer.current);
+        clearInterval(timer.current);
 
         if (readyToStart) {
             timer.current = setInterval(() => {
@@ -80,11 +80,11 @@ export const useMarkdownTyping = (
                                 const textBeforeListItem =
                                     displayText.substring(0, lastBullet!);
 
-                                newDisplayText = 
+                                newDisplayText =
                                     `${textBeforeListItem}<li>` +
                                     workingText[0];
-								// ensures indices are correct if saved later this iteration
-								displayText = `${textBeforeListItem}<li>`;
+                                // ensures indices are correct if saved later this iteration
+                                displayText = `${textBeforeListItem}<li>`;
                                 updatedData.applyListItemIn = null;
                             }
                         }
@@ -100,7 +100,7 @@ export const useMarkdownTyping = (
                             );
 
                             newDisplayText = `${textBeforeBold}<b>${boldedText}</b>`;
-							
+
                             updatedData.lastDoubleStar = null;
                             updatedData.applyBoldNext = false;
                         }

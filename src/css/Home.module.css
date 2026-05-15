@@ -19,64 +19,64 @@
 }
 
 .speedControlsContainer {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	padding: 1rem;
-	gap: 1rem;
-	box-sizing: border-box;
-	position: fixed;
-	bottom: 30px;
-	right: calc(50vw - 15rem);
-	width: 30rem;
-	background-color: var(--dark-background);
-	box-sizing: border-box;
-	border: transparent 1px solid;
-	outline: var(--link) 1px solid;
-	transition: outline-offset ease-in-out 0.5s;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 30px;
+    right: calc(50vw - 15rem);
+    width: 30rem;
+    background-color: var(--dark-background);
+    box-sizing: border-box;
+    border: transparent 1px solid;
+    outline: var(--link) 1px solid;
+    transition: outline-offset ease-in-out 0.5s;
 }
 
 .speedControlsContainer:hover {
-	border: var(--link) 1px solid;
-	outline-offset: 10px;
+    border: var(--link) 1px solid;
+    outline-offset: 10px;
 }
 
 .rangeContainer {
-	flex-grow: 2;
-	display: flex;
-	align-items: center;
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
 }
 
 .rangeInput {
-	margin: 0;
-	width: 100%;
-	appearance: none;
-	direction: rtl;
+    margin: 0;
+    width: 100%;
+    appearance: none;
+    direction: rtl;
 }
 
 .rangeInput::-webkit-slider-thumb {
-	appearance: none;
-	height: 24px;
-	width: 10px;
-	background-color: var(--link);
-	margin-top: -10.5px;
+    appearance: none;
+    height: 24px;
+    width: 10px;
+    background-color: var(--link);
+    margin-top: -10.5px;
 }
 
 .rangeInput::-webkit-slider-runnable-track {
-	appearance: none;
-	background-color: var(--link);
-	height: 2px;
+    appearance: none;
+    background-color: var(--link);
+    height: 2px;
 }
 
 .speedControl {
-	text-decoration: none;
-	background-color: transparent;
-	appearance: none;
-	border: none;
-	color: var(--link);
-	width: 100px;
-	height: 100px;
-	font-size: 36px;
-	border-bottom: var(--link) 1px solid;
+    text-decoration: none;
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    color: var(--link);
+    width: 100px;
+    height: 100px;
+    font-size: 36px;
+    border-bottom: var(--link) 1px solid;
 }

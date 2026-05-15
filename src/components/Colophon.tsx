@@ -33,13 +33,13 @@ const Colophon = () => {
                     </div>
                 </>
             ) : (
-				<div className={styles.buttonContainer}>
-                <button
-                    className={styles.button}
-                    onClick={() => setShow(true)}>
-                    show colophon
-                </button>
-				</div>
+                <div className={styles.buttonContainer}>
+                    <button
+                        className={styles.button}
+                        onClick={() => setShow(true)}>
+                        show colophon
+                    </button>
+                </div>
             )}
         </div>
     );

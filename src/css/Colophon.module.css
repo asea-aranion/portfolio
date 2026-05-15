@@ -1,5 +1,5 @@
 .colophon {
-	padding-bottom: 10rem;
+    padding-bottom: 10rem;
 }
 
 .sectionHeader {
@@ -12,27 +12,27 @@
 }
 
 .buttonContainer {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .button {
     text-decoration: none;
     background-color: transparent;
     appearance: none;
-	border: transparent 1px solid;
-	color: var(--link);
-	outline: var(--link) 1px solid;
-	font-family: inherit;
-	text-align: center;
-	font-size: 28px;
-	margin: 4rem;
-	padding: 1rem 2rem;
+    border: transparent 1px solid;
+    color: var(--link);
+    outline: var(--link) 1px solid;
+    font-family: inherit;
+    text-align: center;
+    font-size: 28px;
+    margin: 4rem;
+    padding: 1rem 2rem;
     transition: outline-offset ease-in-out 0.5s;
 }
 
 .button:hover {
-	border: var(--link) 1px solid;
-	outline-offset: 10px;
+    border: var(--link) 1px solid;
+    outline-offset: 10px;
 }
