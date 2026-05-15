@@ -61,11 +61,14 @@ Check out [how the magic happens](https://github.com/tidbyt/community/tree/main/
 
 const noSelectionText = `_Click a button to learn more about one of my projects._`;
 
-const Projects = () => {
+interface ProjectsProps {
+    setDone: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Projects = ({ setDone }: ProjectsProps) => {
     const [selectedProject, setSelectedProject] = useState<number | undefined>(
         undefined,
     );
-    const [, setDone] = useState(false);
 
     return (
         <div className={styles.grid}>
@@ -73,7 +76,10 @@ const Projects = () => {
                 {projects.map((project, index) => (
                     <>
                         <button
-                            onClick={() => setSelectedProject(index)}
+                            onClick={() => {
+                                setDone(true);
+                                setSelectedProject(index);
+                            }}
                             className={`${styles.button} ${selectedProject == index && styles.selectedButton}`}>
                             <FontAwesomeIcon
                                 icon={project.icon}></FontAwesomeIcon>
@@ -81,13 +87,13 @@ const Projects = () => {
                     </>
                 ))}
             </div>
-                {selectedProject == undefined && (
-                    <TypingDisplay
-                        text={noSelectionText}
-                        ready={true}
-                        setDone={setDone}></TypingDisplay>
-                )}
-            
+            {selectedProject == undefined && (
+                <TypingDisplay
+                    text={noSelectionText}
+                    ready={true}
+                    setDone={setDone}></TypingDisplay>
+            )}
+
             {projects.map((project, index) => {
                 return (
                     <>

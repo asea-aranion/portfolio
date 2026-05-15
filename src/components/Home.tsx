@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faFastForward } from "@fortawesome/free-solid-svg-icons";
 import TypingSpeedContext from "./TypingSpeedContext";
+import Colophon from "./Colophon";
 
 const introText = `Hello, dear reader! I'm **Leia**, a rising junior studying _computer science_ and _linguistics_ at the **University of Maryland, College Park**.`;
 
@@ -21,8 +22,9 @@ const Home = () => {
     const [experienceDone, setExperienceDone] = useState(false);
     const [contactsDone, setContactsDone] = useState(false);
     const [seeProjectsDone, setSeeProjectsDone] = useState(false);
+    const [projectsDone, setProjectsDone] = useState(false);
 
-	const msPerChar = useContext(TypingSpeedContext);
+    const msPerChar = useContext(TypingSpeedContext);
 
     return (
         <>
@@ -69,7 +71,9 @@ const Home = () => {
                     setDone={setSeeProjectsDone}></TypingDisplay>
             </div>
 
-            {seeProjectsDone && <Projects></Projects>}
+            {seeProjectsDone && <Projects setDone={setProjectsDone}></Projects>}
+
+            {projectsDone && <Colophon></Colophon>}
         </>
     );
 };
