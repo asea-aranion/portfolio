@@ -37,7 +37,7 @@ const Colophon = () => {
                     <button
                         className={styles.button}
                         onClick={() => setShow(true)}>
-                        show colophon
+                        more about this site
                     </button>
                 </div>
             )}
