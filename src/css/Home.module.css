@@ -69,14 +69,27 @@
     height: 2px;
 }
 
-.speedControl {
-    text-decoration: none;
-    background-color: transparent;
-    appearance: none;
-    border: none;
-    color: var(--link);
-    width: 100px;
-    height: 100px;
-    font-size: 36px;
-    border-bottom: var(--link) 1px solid;
+@media (max-width: 900px) {
+    .introContainer {
+        margin: 2rem;
+    }
+
+    .speedControlsContainer {
+        width: 90vw;
+        right: 5vw;
+    }
+
+    .grid {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 2rem;
+        margin: 2rem;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+    .sectionHeader {
+        margin: 4rem 2rem 2rem;
+    }
 }

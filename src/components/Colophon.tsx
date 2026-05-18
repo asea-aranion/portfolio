@@ -21,7 +21,7 @@ const Colophon = () => {
                 <>
                     <div className={styles.sectionHeader}>
                         <TypingDisplay
-                            text={`**Colophon**`}
+                            text={`Colophon`}
                             ready={show}
                             setDone={setHeaderDone}></TypingDisplay>
                     </div>

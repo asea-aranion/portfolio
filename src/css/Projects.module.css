@@ -33,3 +33,25 @@
     border: var(--link) 1px solid;
     outline-offset: 10px;
 }
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: minmax(0, 1fr);
+        margin: 2rem;
+        row-gap: 2rem;
+    }
+
+    .buttonColumn {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .button {
+        width: 100%;
+        height: unset;
+        aspect-ratio: 1 / 1;
+        font-size: 7vw;
+    }
+}
