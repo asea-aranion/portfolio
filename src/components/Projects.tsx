@@ -9,14 +9,17 @@ import {
     type IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 
 type Project = {
+    name: string;
     text: string;
     icon: IconDefinition;
 };
 
 const projects: Project[] = [
     {
+        name: "Packet",
         text: `**Packet: Travel Packing Lists**
 _Swift, SwiftUI_
 
@@ -29,6 +32,7 @@ Check out the [repo](https://github.com/asea-aranion/Packet) or [download on the
         icon: faSuitcase,
     },
     {
+        name: "FoMVT Helper",
         text: `**FoMVT Helper**
 _TypeScript, Expo, React Native_
 
@@ -40,6 +44,7 @@ Feel free to check out our [repo](https://github.com/Hack4Impact-UMD/mount-verno
         icon: faSeedling,
     },
     {
+        name: "Commitiquette",
         text: `**Commitiquette**
 _TypeScript_
 
@@ -49,6 +54,7 @@ We all want to find that bug-fixing, feature-implementing flow state, but what a
         icon: faCodeCompare,
     },
     {
+        name: "Underwater Clock",
         text: `**Underwater Clock**
 _Starlark_
 
@@ -74,17 +80,16 @@ const Projects = ({ setDone }: ProjectsProps) => {
         <div className={styles.grid}>
             <div className={styles.buttonColumn}>
                 {projects.map((project, index) => (
-                    <>
-                        <button
-                            onClick={() => {
-                                setDone(true);
-                                setSelectedProject(index);
-                            }}
-                            className={`${styles.button} ${selectedProject == index && styles.selectedButton}`}>
-                            <FontAwesomeIcon
-                                icon={project.icon}></FontAwesomeIcon>
-                        </button>
-                    </>
+                    <button
+                        key={project.name}
+                        onClick={() => {
+                            setDone(true);
+                            setSelectedProject(index);
+                        }}
+                        aria-label={`${project.name}`}
+                        className={`${styles.button} ${selectedProject == index && styles.selectedButton}`}>
+                        <FontAwesomeIcon icon={project.icon}></FontAwesomeIcon>
+                    </button>
                 ))}
             </div>
             {selectedProject == undefined && (
@@ -96,14 +101,14 @@ const Projects = ({ setDone }: ProjectsProps) => {
 
             {projects.map((project, index) => {
                 return (
-                    <>
+                    <React.Fragment key={project.name}>
                         {selectedProject == index && (
                             <TypingDisplay
                                 text={project.text}
                                 ready={true}
                                 setDone={setDone}></TypingDisplay>
                         )}
-                    </>
+                    </React.Fragment>
                 );
             })}
         </div>
