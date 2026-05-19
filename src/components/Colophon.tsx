@@ -9,7 +9,7 @@ The typing animations you've been seeing are created in real time by a **markdow
 _Why this design?_
 I take notes in markdown every day. I find parsing and grammars fascinating (cf. my double major!), especially when they're put to use as great features in apps like Todoist and Obsidian. One inspiration for the broader look was the _Zelda: Breath of the Wild_ inventory UI. The site is also typeset in **Space Mono**, the font I use in VSCode and Terminal. 
 
-In all, I aimed for this site to feel like a representation of me and what I'm passionate about. So, if you thought anything you've read here was cool, definitely get in touch!`;
+In all, I aimed for this site to feel like a representation of me and what I'm passionate about. So, if you thought anything you've seen here was cool, definitely get in touch!`;
 
 const Colophon = () => {
     const [show, setShow] = useState(false);
