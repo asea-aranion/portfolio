@@ -30,11 +30,14 @@ a,
 a:active {
     color: var(--link) !important;
     text-decoration: none;
+    background: linear-gradient(var(--link-hover) 0 0) bottom 4px left /
+        var(--underline-length, 0%) 1.5px no-repeat;
+    transition: background 0.5s ease-in-out;
 }
 
 a:hover {
     color: var(--link-hover) !important;
-    text-decoration: underline;
+    --underline-length: 100%;
 }
 
 b {
