@@ -4,7 +4,8 @@
     border: transparent 1px solid;
     overflow-wrap: break-word;
     height: min-content;
-    outline-offset: 0;
+    border: white 1px solid;
+    outline-offset: -1px;
     outline: white 1px solid;
     transition:
         transform ease-in-out 0.5s,
@@ -12,7 +13,6 @@
 }
 
 .display:hover {
-    border: white 1px solid;
     outline-offset: 10px;
 }
 

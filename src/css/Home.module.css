@@ -36,13 +36,12 @@
     width: 30rem;
     background-color: var(--dark-background);
     box-sizing: border-box;
-    border: transparent 1px solid;
+    border: var(--link) 1px solid;
     outline: var(--link) 1px solid;
     transition: outline-offset ease-in-out 0.5s;
 }
 
 .speedControlsContainer:hover {
-    border: var(--link) 1px solid;
     outline-offset: 10px;
 }
 

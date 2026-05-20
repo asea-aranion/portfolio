@@ -19,11 +19,11 @@
     appearance: none;
     color: var(--link);
     box-sizing: border-box;
-    border: transparent 1px solid;
+    border: var(--link) 1px solid;
     width: 150px;
     height: 150px;
     font-size: 56px;
-    outline-offset: 0;
+    outline-offset: -1px;
     outline: var(--link) 1px solid;
     transition: outline-offset ease-in-out 0.5s;
     display: flex;
@@ -33,7 +33,6 @@
 
 .selectedButton,
 .button:hover {
-    border: var(--link) 1px solid;
     outline-offset: 10px;
 }
 
