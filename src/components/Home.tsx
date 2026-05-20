@@ -45,35 +45,39 @@ const Home = () => {
                 </div>
                 <FontAwesomeIcon icon={faFastForward}></FontAwesomeIcon>
             </div>
-            <div className={styles.introContainer}>
-                <TypingDisplay
-                    text={introText}
-                    ready={true}
-                    setDone={setIntroDone}></TypingDisplay>
-            </div>
-            <div className={styles.grid}>
-                <TypingDisplay
-                    text={experienceText}
-                    ready={introDone}
-                    setDone={setExperienceDone}></TypingDisplay>
-                <div>
-                    <div className={styles.spacer}></div>
+            <div className={styles.content}>
+                <div className={styles.introContainer}>
                     <TypingDisplay
-                        text={contactsText}
-                        ready={experienceDone}
-                        setDone={setContactsDone}></TypingDisplay>
+                        text={introText}
+                        ready={true}
+                        setDone={setIntroDone}></TypingDisplay>
                 </div>
-            </div>
-            <div className={styles.sectionHeader}>
-                <TypingDisplay
-                    text={seeProjectsText}
-                    ready={contactsDone}
-                    setDone={setSeeProjectsDone}></TypingDisplay>
-            </div>
+                <div className={styles.grid}>
+                    <TypingDisplay
+                        text={experienceText}
+                        ready={introDone}
+                        setDone={setExperienceDone}></TypingDisplay>
+                    <div>
+                        <div className={styles.spacer}></div>
+                        <TypingDisplay
+                            text={contactsText}
+                            ready={experienceDone}
+                            setDone={setContactsDone}></TypingDisplay>
+                    </div>
+                </div>
+                <div className={styles.sectionHeader}>
+                    <TypingDisplay
+                        text={seeProjectsText}
+                        ready={contactsDone}
+                        setDone={setSeeProjectsDone}></TypingDisplay>
+                </div>
 
-            {seeProjectsDone && <Projects setDone={setProjectsDone}></Projects>}
+                {seeProjectsDone && (
+                    <Projects setDone={setProjectsDone}></Projects>
+                )}
 
-            {projectsDone && <Colophon></Colophon>}
+                {projectsDone && <Colophon></Colophon>}
+            </div>
         </>
     );
 };

@@ -10,10 +10,13 @@
     -moz-osx-font-smoothing: grayscale;
 
     --dark-background: #0a0a0e;
+    background: var(--dark-background);
     background-image: linear-gradient(
         #222237 0vh,
         var(--dark-background) 200vh
     );
+    background-repeat: no-repeat;
+
     color: white;
     --link: #bcfde0;
     --link-hover: #71ffbf;
