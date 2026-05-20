@@ -34,6 +34,7 @@ const Home = () => {
                     <input
                         type="range"
                         step="any"
+                        aria-label="Typing animation: set milliseconds per character"
                         className={styles.rangeInput}
                         min={5}
                         max={65}
