@@ -1,0 +1,64 @@
+.grid {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    column-gap: 2rem;
+    margin: 4rem 10rem;
+    align-items: start;
+}
+
+.buttonColumn {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: start;
+}
+
+.button {
+    text-decoration: none;
+    background-color: transparent;
+    appearance: none;
+    color: var(--link);
+    box-sizing: border-box;
+    border: var(--link) 1px solid;
+    width: 150px;
+    height: 150px;
+    font-size: 56px;
+    outline-offset: -1px;
+    outline: var(--link) 1px solid;
+    transition: outline-offset ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectedButton,
+.button:hover {
+    outline-offset: 10px;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: minmax(0, 1fr);
+        margin: 2rem;
+        row-gap: 2rem;
+    }
+
+    .buttonColumn {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .button {
+        width: 100%;
+        height: unset;
+        aspect-ratio: 1 / 1;
+        font-size: 7vw;
+    }
+}

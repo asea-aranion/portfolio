@@ -1,0 +1,115 @@
+.content {
+    padding-bottom: 10rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+    column-gap: 4rem;
+    margin: 4rem;
+}
+
+.spacer {
+    height: 8rem;
+}
+
+.introContainer {
+    margin: 4rem;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin: 4rem 10rem;
+}
+
+.speedControlsContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 30px;
+    right: calc(50vw - 15rem);
+    width: 30rem;
+    background-color: var(--dark-background);
+    box-sizing: border-box;
+    border: var(--link) 1px solid;
+    outline: var(--link) 1px solid;
+    transition: outline-offset ease-in-out 0.5s;
+}
+
+.speedControlsContainer:hover {
+    outline-offset: 10px;
+}
+
+.rangeContainer {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+.rangeInput {
+    margin: 0;
+    width: 100%;
+    appearance: none;
+    direction: rtl;
+    background: transparent;
+}
+
+.rangeInput::-webkit-slider-thumb {
+    appearance: none;
+    height: 24px;
+    width: 10px;
+    background-color: var(--link);
+    margin-top: -10.5px;
+}
+
+.rangeInput::-webkit-slider-runnable-track {
+    appearance: none;
+    background-color: var(--link);
+    height: 2px;
+}
+
+.rangeInput::-moz-range-thumb {
+    appearance: none;
+    height: 24px;
+    width: 10px;
+    background-color: var(--link);
+    margin-top: -10.5px;
+    border-radius: 0;
+    border: none;
+}
+
+.rangeInput::-moz-range-track {
+    appearance: none;
+    background-color: var(--link);
+    height: 2px;
+}
+
+@media (max-width: 900px) {
+    .introContainer {
+        margin: 2rem;
+    }
+
+    .speedControlsContainer {
+        width: 90vw;
+        right: 5vw;
+    }
+
+    .grid {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 2rem;
+        margin: 2rem;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+    .sectionHeader {
+        margin: 4rem 2rem 2rem;
+    }
+}

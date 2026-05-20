@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-    font-family: "Space Grotesk", Avenir, sans-serif;
+    font-family: "Space Mono", Avenir, sans-serif;
     font-weight: 400;
 
     font-synthesis: none;
@@ -9,22 +9,52 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-color: #222237;
-    --secondary-background: #424274;
+    --dark-background: #0a0a0e;
+    background: var(--dark-background);
+    background-image: linear-gradient(
+        #222237 0vh,
+        var(--dark-background) 200vh
+    );
+    background-repeat: no-repeat;
+
     color: white;
-    --secondary-text: #dfe8ff;
+    --link: #bcfde0;
+    --link-hover: #71ffbf;
+    --bold: #ccedff;
+    --italic: #d0bdff;
 }
 
 body {
     margin: 0;
+    min-height: 110vh;
 }
 
 a,
 a:active {
-    color: #dfe8ff !important;
+    color: var(--link) !important;
     text-decoration: none;
+    background: linear-gradient(var(--link-hover) 0 0) bottom 4px left /
+        var(--underline-length, 0%) 1.5px no-repeat;
+    transition: background 0.5s ease-in-out;
 }
 
 a:hover {
-    color: #a5beff !important;
+    color: var(--link-hover) !important;
+    --underline-length: 100%;
+}
+
+b {
+    color: var(--bold);
+}
+
+i {
+    color: var(--italic);
+}
+
+li {
+    padding-left: 1rem;
+}
+
+li::marker {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20px" height="20px"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="white" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg>');
 }

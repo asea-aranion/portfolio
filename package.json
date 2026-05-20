@@ -7,14 +7,11 @@
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "pret": "npx prettier . --write"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^7.0.0",
-        "@fortawesome/free-brands-svg-icons": "^7.0.0",
-        "@fortawesome/free-regular-svg-icons": "^7.0.0",
-        "@fortawesome/free-solid-svg-icons": "^7.0.0",
-        "@fortawesome/react-fontawesome": "^0.2.3",
+        "lucide-react": "^1.16.0",
         "prettier": "^3.6.2",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
