@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import styles from "../css/PacketPrivacyPolicy.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { LucideChevronLeft } from "lucide-react";
 
 const PacketPrivacyPolicy = () => {
     return (
         <>
             <header className={styles.header}>
                 <h1 className={styles.title}>
-                    <Link to="/">
-                        <FontAwesomeIcon
-                            icon={faChevronLeft}
-                            size="xs"></FontAwesomeIcon>
+                    <Link
+                        to="/"
+                        className={styles.link}>
+                        <LucideChevronLeft size={40}></LucideChevronLeft>
                     </Link>{" "}
                     Packet Privacy Policy
                 </h1>

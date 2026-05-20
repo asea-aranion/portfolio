@@ -57,7 +57,7 @@
     width: 100%;
     appearance: none;
     direction: rtl;
-	background: transparent;
+    background: transparent;
 }
 
 .rangeInput::-webkit-slider-thumb {
@@ -75,19 +75,19 @@
 }
 
 .rangeInput::-moz-range-thumb {
-	appearance: none;
-	height: 24px;
-	width: 10px;
-	background-color: var(--link);
-	margin-top: -10.5px;
-	border-radius: 0;
-	border: none;
+    appearance: none;
+    height: 24px;
+    width: 10px;
+    background-color: var(--link);
+    margin-top: -10.5px;
+    border-radius: 0;
+    border: none;
 }
 
 .rangeInput::-moz-range-track {
-	appearance: none;
-	background-color: var(--link);
-	height: 2px;
+    appearance: none;
+    background-color: var(--link);
+    height: 2px;
 }
 
 @media (max-width: 900px) {

@@ -2,8 +2,7 @@ import TypingDisplay from "./TypingDisplay";
 import styles from "../css/Home.module.css";
 import { useContext, useState } from "react";
 import Projects from "./Projects";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faFastForward } from "@fortawesome/free-solid-svg-icons";
+import { LucideRabbit, LucideTurtle } from "lucide-react";
 import TypingSpeedContext from "./TypingSpeedContext";
 import Colophon from "./Colophon";
 
@@ -29,7 +28,7 @@ const Home = () => {
     return (
         <>
             <div className={styles.speedControlsContainer}>
-                <FontAwesomeIcon icon={faPlay}></FontAwesomeIcon>
+                <LucideTurtle size={30}></LucideTurtle>
                 <div className={styles.rangeContainer}>
                     <input
                         type="range"
@@ -44,7 +43,7 @@ const Home = () => {
                                 .value as unknown as number)
                         }></input>
                 </div>
-                <FontAwesomeIcon icon={faFastForward}></FontAwesomeIcon>
+                <LucideRabbit size={30}></LucideRabbit>
             </div>
             <div className={styles.content}>
                 <div className={styles.introContainer}>

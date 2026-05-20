@@ -26,12 +26,20 @@
     outline-offset: 0;
     outline: var(--link) 1px solid;
     transition: outline-offset ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .selectedButton,
 .button:hover {
     border: var(--link) 1px solid;
     outline-offset: 10px;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
 }
 
 @media (max-width: 900px) {
