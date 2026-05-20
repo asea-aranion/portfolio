@@ -33,19 +33,19 @@ export const useMarkdownTyping = (
         applyBoldNext: false,
     });
 
-	// reference to the interval so it can be cleared
+    // reference to the interval so it can be cleared
     const timer = useRef<number>(undefined);
 
     const msPerChar = useContext(TypingSpeedContext);
 
     useEffect(() => {
-		// clear old interval if speed changed
+        // clear old interval if speed changed
         clearInterval(timer.current);
 
         if (readyToStart) {
             timer.current = setInterval(() => {
-				// update text in setState callback to avoid 
-				// concurrency issues
+                // update text in setState callback to avoid
+                // concurrency issues
                 setData(
                     ({
                         workingText,
@@ -56,7 +56,7 @@ export const useMarkdownTyping = (
                         applyListItemIn,
                         applyBoldNext,
                     }: MarkdownTypingData) => {
-						// create new object to modify and return
+                        // create new object to modify and return
                         const updatedData: MarkdownTypingData = {
                             workingText,
                             displayText,
@@ -67,25 +67,25 @@ export const useMarkdownTyping = (
                             applyBoldNext,
                         };
 
-						// reached end of input
+                        // reached end of input
                         if (!workingText) {
                             clearInterval(timer.current);
                             setDone(true);
                             return updatedData;
                         }
 
-						// base case: print next character
+                        // base case: print next character
                         let newDisplayText = displayText + workingText[0];
 
-						// check for list item flag
+                        // check for list item flag
                         if (applyListItemIn != null) {
                             if (applyListItemIn > 0) {
-								// count down chars until list item pattern
-								// has been printed and will be replaced
+                                // count down chars until list item pattern
+                                // has been printed and will be replaced
                                 updatedData.applyListItemIn =
                                     applyListItemIn - 1;
                             } else {
-								// replace markdown list bullet with li tag
+                                // replace markdown list bullet with li tag
                                 const textBeforeListItem =
                                     displayText.substring(0, lastBullet!);
 
@@ -93,15 +93,15 @@ export const useMarkdownTyping = (
                                     `${textBeforeListItem}<li>` +
                                     workingText[0];
                                 // ensures any indices saved later this iteration
-								// will be correct
+                                // will be correct
                                 displayText = `${textBeforeListItem}<li>`;
                                 updatedData.applyListItemIn = null;
                             }
                         }
 
-						// check for bold flag
+                        // check for bold flag
                         if (applyBoldNext) {
-							// replace markdown asterisks with b tag
+                            // replace markdown asterisks with b tag
                             const textBeforeBold = displayText.substring(
                                 0,
                                 lastDoubleStar!,
@@ -117,7 +117,7 @@ export const useMarkdownTyping = (
                             updatedData.applyBoldNext = false;
                         }
 
-						// start regular lexing/parsing of next character
+                        // start regular lexing/parsing of next character
                         if (workingText.match(bulletPattern)) {
                             if (lastBullet != null) {
                                 // close previous list item before opening a new one
@@ -126,8 +126,8 @@ export const useMarkdownTyping = (
                                 // open list and list item
                                 newDisplayText = displayText + "<ul>";
                             }
-							// li tag will be added after rest of markdown bullet
-							// has been printed
+                            // li tag will be added after rest of markdown bullet
+                            // has been printed
                             updatedData.applyListItemIn = 2;
                             updatedData.lastBullet = newDisplayText.length;
                         } else if (workingText.match(newlinePattern)) {
@@ -136,7 +136,7 @@ export const useMarkdownTyping = (
                                 // we've already checked that we're not starting a new list item
                                 newDisplayText = displayText + "</li></ul>";
                             } else {
-								// standard newline
+                                // standard newline
                                 newDisplayText = displayText + "<br />";
                             }
                         } else if (workingText.match(doubleStarPattern)) {
@@ -165,10 +165,10 @@ export const useMarkdownTyping = (
                                 updatedData.lastUnderscore = displayText.length;
                             }
                         } else if (workingText.match(closingParenPattern)) {
-							// check if this closes a markdown link
+                            // check if this closes a markdown link
                             const linkMatch = displayText.match(linkPattern);
                             if (linkMatch) {
-								// replace with a tag
+                                // replace with a tag
                                 const startOfLink =
                                     displayText.length -
                                     (linkMatch[1].length +
@@ -182,19 +182,19 @@ export const useMarkdownTyping = (
                             }
                         }
 
-						// replace display with any modifications made
+                        // replace display with any modifications made
                         updatedData.displayText = newDisplayText;
-						// consume character
+                        // consume character
                         updatedData.workingText = workingText.substring(1);
 
-						// update state
+                        // update state
                         return updatedData;
                     },
                 );
             }, msPerChar.current);
         }
 
-		// clear timer on unmount
+        // clear timer on unmount
         return () => clearInterval(timer.current);
     }, [msPerChar.current, setDone, readyToStart]);
 
