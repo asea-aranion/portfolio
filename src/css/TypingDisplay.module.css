@@ -7,6 +7,7 @@
     border: white 1px solid;
     outline-offset: -1px;
     outline: white 1px solid;
+    background-color: var(--dark-background);
     transition:
         transform ease-in-out 0.5s,
         outline-offset ease-in-out 0.5s;

@@ -10,18 +10,25 @@
     -moz-osx-font-smoothing: grayscale;
 
     --dark-background: #0a0a0e;
-    background: var(--dark-background);
-    background-image: linear-gradient(
-        #222237 0vh,
-        var(--dark-background) 200vh
-    );
-    background-repeat: no-repeat;
-
+    background-color: var(--dark-background);
     color: white;
     --link: #bcfde0;
     --link-hover: #71ffbf;
     --bold: #ccedff;
     --italic: #d0bdff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background:
+        radial-gradient(transparent 30%, var(--dark-background)) center /
+            contain,
+        url("assets/distorted_grid.png") center / cover no-repeat;
+    z-index: -1;
 }
 
 body {

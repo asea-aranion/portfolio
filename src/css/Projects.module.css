@@ -15,7 +15,7 @@
 
 .button {
     text-decoration: none;
-    background-color: transparent;
+    background-color: var(--dark-background);
     appearance: none;
     color: var(--link);
     box-sizing: border-box;

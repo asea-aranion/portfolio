@@ -45,6 +45,7 @@ const Home = () => {
                 </div>
                 <LucideRabbit size={30}></LucideRabbit>
             </div>
+
             <div className={styles.content}>
                 <div className={styles.introContainer}>
                     <TypingDisplay
