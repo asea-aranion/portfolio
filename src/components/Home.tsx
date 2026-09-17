@@ -6,7 +6,7 @@ import { LucideRabbit, LucideTurtle } from "lucide-react";
 import TypingSpeedContext from "./TypingSpeedContext";
 import Colophon from "./Colophon";
 
-const introText = `Hello, dear reader! I'm **Leia**, a rising junior studying _computer science_ and _linguistics_ at the **University of Maryland, College Park**.`;
+const introText = `Hello, dear reader! I'm **Leia**, a junior studying _computer science_ and _linguistics_ at the **University of Maryland, College Park**.`;
 
 const contactsText = `Find me on:
 - [linkedin](https://www.linkedin.com/in/leia-spagnola/)
