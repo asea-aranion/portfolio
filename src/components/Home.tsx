@@ -12,7 +12,7 @@ const contactsText = `Find me on:
 - [linkedin](https://www.linkedin.com/in/leia-spagnola/)
 - [github](https://github.com/asea-aranion)`;
 
-const experienceText = `This summer I'm at **Meta** for the second time as a _software engineering intern_. I've also worked for UMD's **student union** as a _web developer_.`;
+const experienceText = `I'm recently back from a second summer at **Meta**, as a _software engineering intern_. I've also worked for UMD's **student union** as a _web developer_.`;
 
 const seeProjectsText = `What I've been working on lately:`;
 
